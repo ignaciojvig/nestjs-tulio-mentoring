@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Serverless Offline",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "/home/joaoignacio/.nvm/versions/node/v14.18.1/bin/npm",
+      "args": ["run", "start", "--watch"],
+      "preLaunchTask": "transpile-nestjs",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "node"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+# Use root/example as user/password credentials
+version: "3.1"
+
+services:
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: demo-aws-serverless
+      MYSQL_ROOT_PASSWORD: 94Ls!e3PYBMqyF
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
